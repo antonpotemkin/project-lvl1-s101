@@ -1,8 +1,8 @@
 {
   "name": "project-lvl1-s101-ap",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.1",
+  "description": "Brain Games project by Hexlet",
+  "main": "src/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -21,6 +21,9 @@
     "url": "https://github.com/antonpotemkin/project-lvl1-s101/issues"
   },
   "homepage": "https://github.com/antonpotemkin/project-lvl1-s101#readme",
+  "dependencies": {
+    "readline-sync": "*"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
