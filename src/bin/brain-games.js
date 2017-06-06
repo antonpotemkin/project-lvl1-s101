@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import welcome from '..'
+import welcome from '..';
 
 welcome();
