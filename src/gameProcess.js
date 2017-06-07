@@ -1,20 +1,8 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
-import { getCondition, getQuestion } from '..';
 
-export const welcome = (gameName) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(getCondition(gameName));
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
-  return name;
-};
-
-export const iter = (gameName, roundCount) => {
-  if (roundCount === 0) {
-    return true;
-  }
-  const questionPair = getQuestion(gameName);
+const iter = (questions) => {
+  const questionPair = car(questions);
   console.log(`Question: ${car(questionPair)}`);
   const answer = readlineSync.question('Your answer: ');
   const correctAnswer = cdr(questionPair);
@@ -23,10 +11,18 @@ export const iter = (gameName, roundCount) => {
     return false;
   }
   console.log('Correct!');
-  return iter(gameName, roundCount - 1);
+  if (!cdr(questions)) {
+    return true;
+  }
+  return iter(cdr(questions));
 };
 
-export const exit = (isWin, name) => {
+export default (game) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(car(game));
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!\n`);
+  const isWin = iter(cdr(game));
   if (!isWin) {
     console.log(`Let's try again, ${name}!`);
   } else {

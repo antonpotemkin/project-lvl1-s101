@@ -1,8 +1,26 @@
-import { welcome, iter, exit } from './game';
+import { cons } from 'hexlet-pairs';
+import startGame from '../gameProcess';
+
+const getRandomNumber = max => Math.floor(Math.random() * max);
+
+const questionPair = () => {
+  const firstNumber = getRandomNumber(40);
+  const secondNumber = getRandomNumber(10);
+  const operations = ['+', '-', '*'];
+  const operation = operations[getRandomNumber(3)];
+  const question = `${firstNumber} ${operation} ${secondNumber}`;
+  switch (operation) {
+    case '+':
+      return cons(question, firstNumber + secondNumber);
+    case '-':
+      return cons(question, firstNumber - secondNumber);
+    default:
+      return cons(question, firstNumber * secondNumber);
+  }
+};
 
 export default () => {
-  const gameName = 'calc';
-  const name = welcome(gameName);
-  const isWin = iter(gameName, 3);
-  exit(isWin, name);
+  const condition = 'Find the greatest common divisor of given numbers.\n';
+  const gameRule = cons(questionPair(), cons(questionPair(), cons(questionPair())));
+  return startGame(cons(condition, gameRule));
 };
