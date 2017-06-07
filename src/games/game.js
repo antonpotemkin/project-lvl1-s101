@@ -10,8 +10,8 @@ export const welcome = (gameName) => {
   return name;
 };
 
-export const iter = (gameName, round) => {
-  if (round === 0) {
+export const iter = (gameName, roundCount) => {
+  if (roundCount === 0) {
     return true;
   }
   const questionPair = getQuestion(gameName);
@@ -23,7 +23,7 @@ export const iter = (gameName, round) => {
     return false;
   }
   console.log('Correct!');
-  return iter(gameName, round - 1);
+  return iter(gameName, roundCount - 1);
 };
 
 export const exit = (isWin, name) => {
