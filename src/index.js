@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 
-const getRandom = max => Math.floor(Math.random() * max);
+const getRandomNumber = max => Math.floor(Math.random() * max);
 
 const isEven = (number) => {
   if (number % 2 === 0) {
@@ -23,15 +23,15 @@ export const getCondition = (gameName) => {
 export const getQuestion = (gameName) => {
   switch (gameName) {
     case 'even': {
-      const question = getRandom(100);
+      const question = getRandomNumber(100);
       const correctAnswer = isEven(question);
       return cons(question, correctAnswer);
     }
     default: {
-      const firstNumber = getRandom(40);
-      const secondNumber = getRandom(10);
+      const firstNumber = getRandomNumber(40);
+      const secondNumber = getRandomNumber(10);
       const operations = ['+', '-', '*'];
-      const operation = operations[getRandom(3)];
+      const operation = operations[getRandomNumber(3)];
       const question = `${firstNumber} ${operation} ${secondNumber}`;
       switch (operation) {
         case '+':
