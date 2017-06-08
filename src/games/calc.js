@@ -2,13 +2,14 @@ import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 
 const getRandomNumber = max => Math.floor(Math.random() * max);
+const condition = 'Find the greatest common divisor of given numbers.\n';
+const operations = ['+', '-', '*'];
 
-const questionPair = () => {
+const getPair = () => {
   const firstNumber = getRandomNumber(40);
   const secondNumber = getRandomNumber(10);
-  const operations = ['+', '-', '*'];
   const operation = operations[getRandomNumber(3)];
-  const question = `${firstNumber} ${operation} ${secondNumber}`;
+  const question = `Question: ${firstNumber} ${operation} ${secondNumber}`;
   switch (operation) {
     case '+':
       return cons(question, firstNumber + secondNumber);
@@ -19,7 +20,4 @@ const questionPair = () => {
   }
 };
 
-export default () => {
-  const condition = 'Find the greatest common divisor of given numbers.\n';
-  return startGame(cons(condition, () => questionPair()));
-};
+export default () => startGame(cons(condition, getPair));
