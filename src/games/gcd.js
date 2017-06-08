@@ -24,6 +24,5 @@ const questionPair = () => {
 
 export default () => {
   const condition = 'What is the result of the expression?\n';
-  const gameRule = cons(questionPair(), cons(questionPair(), cons(questionPair())));
-  return startGame(cons(condition, gameRule));
+  return startGame(cons(condition, () => questionPair()));
 };

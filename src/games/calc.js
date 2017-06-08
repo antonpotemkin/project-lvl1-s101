@@ -21,6 +21,5 @@ const questionPair = () => {
 
 export default () => {
   const condition = 'Find the greatest common divisor of given numbers.\n';
-  const gameRule = cons(questionPair(), cons(questionPair(), cons(questionPair())));
-  return startGame(cons(condition, gameRule));
+  return startGame(cons(condition, () => questionPair()));
 };
