@@ -2,22 +2,23 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
 const roundCount = 3;
+const getRandomNumber = max => Math.floor(Math.random() * max);
 
-const iter = (pair, count) => {
-  const questionAndAnswer = pair();
+const iter = (puzzle, count) => {
+  if (count === 0) {
+    return true;
+  }
+  const questionAndAnswer = puzzle(getRandomNumber);
   const question = car(questionAndAnswer);
   console.log(question);
   const answer = readlineSync.question('Your answer: ');
   const correctAnswer = cdr(questionAndAnswer);
-  if (answer !== `${correctAnswer}`) {
+  if (answer !== correctAnswer) {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     return false;
   }
   console.log('Correct!');
-  if (count === 1) {
-    return true;
-  }
-  return iter(pair, count - 1);
+  return iter(puzzle, count - 1);
 };
 
 export default (game) => {
@@ -26,8 +27,8 @@ export default (game) => {
   console.log(condition);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
-  const questionAndAnswer = cdr(game);
-  const isWin = iter(questionAndAnswer, roundCount);
+  const puzzle = cdr(game);
+  const isWin = iter(puzzle, roundCount);
   if (!isWin) {
     console.log(`Let's try again, ${name}!`);
   } else {

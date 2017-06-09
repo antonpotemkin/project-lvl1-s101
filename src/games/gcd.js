@@ -1,7 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 
-const getRandomNumber = max => Math.floor(Math.random() * max);
 const condition = 'What is the result of the expression?\n';
 
 const getGcd = (a, b) => {
@@ -14,12 +13,12 @@ const getGcd = (a, b) => {
   return getGcd(b, a % b);
 };
 
-const getPair = () => {
+const getPuzzle = (getRandomNumber) => {
   const firstNumber = getRandomNumber(60) + 1;
   const secondNumber = getRandomNumber(50) + 1;
   const question = `Question: ${firstNumber} ${secondNumber}`;
-  const correctAnswer = getGcd(firstNumber, secondNumber);
-  return cons(question, correctAnswer);
+  const answer = getGcd(firstNumber, secondNumber);
+  return cons(question, `${answer}`);
 };
 
-export default () => startGame(cons(condition, getPair));
+export default () => startGame(cons(condition, getPuzzle));

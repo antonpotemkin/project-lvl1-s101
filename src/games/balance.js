@@ -1,7 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 
-const getRandomNumber = max => Math.floor(Math.random() * max) + 100;
 const condition = 'Balance the given number.\n';
 
 const iter = (acc, sum, count) => {
@@ -15,15 +14,15 @@ const iter = (acc, sum, count) => {
 const getBalance = (number) => {
   const array = `${number}`.split('');
   const length = array.length;
-  const sum = array.reduce((acc, value) => acc + parseInt(value, 10), 0);
+  const sum = array.reduce((acc, value) => acc + Number(value), 0);
   return iter('', sum, length);
 };
 
-const getPair = () => {
+const getPuzzle = (getRandomNumber) => {
   const number = getRandomNumber(5000);
   const question = `Question: ${number}`;
   const answer = getBalance(number);
-  return cons(question, answer);
+  return cons(question, `${answer}`);
 };
 
-export default () => startGame(cons(condition, getPair));
+export default () => startGame(cons(condition, getPuzzle));
