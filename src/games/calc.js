@@ -1,10 +1,11 @@
 import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
+import getRandomNumber from '../randomGenerator';
 
-const condition = 'Find the greatest common divisor of given numbers.\n';
+const condition = 'Find the greatest common divisor of given numbers.';
 const operations = ['+', '-', '*'];
 
-const getPuzzle = (getRandomNumber) => {
+const getPuzzle = () => {
   const firstNumber = getRandomNumber(40);
   const secondNumber = getRandomNumber(10);
   const operation = operations[getRandomNumber(3)];

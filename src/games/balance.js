@@ -1,7 +1,8 @@
 import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
+import getRandomNumber from '../randomGenerator';
 
-const condition = 'Balance the given number.\n';
+const condition = 'Balance the given number.';
 
 const iter = (acc, sum, count) => {
   if (count === 0) {
@@ -18,7 +19,7 @@ const getBalance = (number) => {
   return iter('', sum, length);
 };
 
-const getPuzzle = (getRandomNumber) => {
+const getPuzzle = () => {
   const number = getRandomNumber(5000);
   const question = `Question: ${number}`;
   const answer = getBalance(number);
