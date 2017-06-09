@@ -8,8 +8,7 @@ const getGcd = (a, b) => {
   if (b === 1) {
     return b;
   }
-  const isGcd = a % b === 0;
-  if (isGcd) {
+  if (a % b === 0) {
     return b;
   }
   return getGcd(b, a % b);
