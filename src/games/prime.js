@@ -10,17 +10,17 @@ const isPrime = (number) => {
     return false;
   }
 
-  const iter = (step) => {
-    if (step > number / 2) {
+  const iter = (div) => {
+    if (div > number / 2) {
       return true;
     }
-    if (number % step === 0) {
+    if (number % div === 0) {
       return false;
     }
-    return iter(step + 1);
+    return iter(div + 1);
   };
-
-  return iter(2);
+  const div = 2;
+  return iter(div);
 };
 
 const getPuzzle = () => {
