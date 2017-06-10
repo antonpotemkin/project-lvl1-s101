@@ -26,7 +26,8 @@ export default (game) => {
   console.log(condition);
   console.log();
   const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
+  console.log(`Hello, ${name}!`);
+  console.log();
   const puzzle = cdr(game);
   const isWin = iter(puzzle, roundCount);
   if (!isWin) {
