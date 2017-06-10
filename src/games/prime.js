@@ -3,6 +3,7 @@ import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
 const condition = 'Answer "yes" if number prime otherwise answer "no".';
+const max = 100;
 
 const isPrime = (number) => {
   if (number <= 1) {
@@ -23,8 +24,8 @@ const isPrime = (number) => {
 };
 
 const getPuzzle = () => {
-  const number = getRandomNumber(100);
-  const question = `Question: ${number}`;
+  const number = getRandomNumber(max);
+  const question = number;
   return cons(question, isPrime(number) ? 'yes' : 'no');
 };
 

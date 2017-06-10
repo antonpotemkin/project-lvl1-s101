@@ -4,12 +4,14 @@ import getRandomNumber from '../randomGenerator';
 
 const condition = 'Find the greatest common divisor of given numbers.';
 const operations = ['+', '-', '*'];
+const maxFirstNumber = 40;
+const maxSecondNumber = 10;
 
 const getPuzzle = () => {
-  const firstNumber = getRandomNumber(40);
-  const secondNumber = getRandomNumber(10);
-  const operation = operations[getRandomNumber(3)];
-  const question = `Question: ${firstNumber} ${operation} ${secondNumber}`;
+  const firstNumber = getRandomNumber(maxFirstNumber);
+  const secondNumber = getRandomNumber(maxSecondNumber);
+  const operation = operations[getRandomNumber(operations.length)];
+  const question = `${firstNumber} ${operation} ${secondNumber}`;
   switch (operation) {
     case '+': {
       const answer = firstNumber + secondNumber;

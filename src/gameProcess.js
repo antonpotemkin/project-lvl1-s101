@@ -9,7 +9,7 @@ const iter = (puzzle, count) => {
   }
   const questionAndAnswer = puzzle();
   const question = car(questionAndAnswer);
-  console.log(question);
+  console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   const correctAnswer = cdr(questionAndAnswer);
   if (answer !== correctAnswer) {
