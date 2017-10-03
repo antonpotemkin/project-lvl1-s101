@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/antonpotemkin/project-lvl1-s101.svg?branch=master)](https://travis-ci.org/antonpotemkin/project-lvl1-s101)
 [![npm version](https://badge.fury.io/js/project-lvl1-ap.svg)](https://badge.fury.io/js/project-lvl1-ap)
 
+В рамках данного проекта реализован набор мини-игр, запускаемых из консоли. Эти игры похожи на то, что обычно называют "Brain Games".
+
 ### Install games
 `
 npm i -g project-lvl1-ap
