@@ -1,4 +1,4 @@
-# project Brain-games by Hexlet
+# Brain-games project by Hexlet
 [![Code Climate](https://codeclimate.com/github/antonpotemkin/project-lvl1-s101/badges/gpa.svg)](https://codeclimate.com/github/antonpotemkin/project-lvl1-s101)
 [![Build Status](https://travis-ci.org/antonpotemkin/project-lvl1-s101.svg?branch=master)](https://travis-ci.org/antonpotemkin/project-lvl1-s101)
 [![npm version](https://badge.fury.io/js/project-lvl1-ap.svg)](https://badge.fury.io/js/project-lvl1-ap)
