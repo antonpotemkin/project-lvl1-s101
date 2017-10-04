@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
@@ -9,7 +8,8 @@ const isEven = number => number % 2 === 0;
 const getPuzzle = () => {
   const number = getRandomNumber(max);
   const question = number;
-  return cons(question, isEven(number) ? 'yes' : 'no');
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  return { question, correctAnswer };
 };
 
-export default () => startGame(cons(condition, getPuzzle));
+export default () => startGame({ condition, getPuzzle });
