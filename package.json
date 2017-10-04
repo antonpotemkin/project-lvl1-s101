@@ -29,8 +29,7 @@
   },
   "homepage": "https://github.com/antonpotemkin/project-lvl1-s101#readme",
   "dependencies": {
-    "readline-sync": "*",
-    "hexlet-pairs": "*"
+    "readline-sync": "*"
   },
   "devDependencies": {
     "babel-cli": "*",
