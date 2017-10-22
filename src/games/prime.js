@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
@@ -26,7 +25,8 @@ const isPrime = (number) => {
 const getPuzzle = () => {
   const number = getRandomNumber(max);
   const question = number;
-  return cons(question, isPrime(number) ? 'yes' : 'no');
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  return { question, correctAnswer };
 };
 
-export default () => startGame(cons(condition, getPuzzle));
+export default () => startGame({ condition, getPuzzle });
