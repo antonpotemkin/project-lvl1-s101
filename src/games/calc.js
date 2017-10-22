@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
@@ -15,17 +14,17 @@ const getPuzzle = () => {
   switch (operation) {
     case '+': {
       const answer = firstNumber + secondNumber;
-      return cons(question, `${answer}`);
+      return { question, correctAnswer: `${answer}` };
     }
     case '-': {
       const answer = firstNumber - secondNumber;
-      return cons(question, `${answer}`);
+      return { question, correctAnswer: `${answer}` };
     }
     default: {
       const answer = firstNumber * secondNumber;
-      return cons(question, `${answer}`);
+      return { question, correctAnswer: `${answer}` };
     }
   }
 };
 
-export default () => startGame(cons(condition, getPuzzle));
+export default () => startGame({ condition, getPuzzle });
