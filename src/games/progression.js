@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
@@ -24,7 +23,7 @@ const getPuzzle = () => {
   const answer = progression[indexOfAnswer];
   progression[indexOfAnswer] = '..';
   const question = progression.reduce((acc, element) => `${acc}${element} `, '');
-  return cons(question, `${answer}`);
+  return { question, correctAnswer: `${answer}` };
 };
 
-export default () => startGame(cons(condition, getPuzzle));
+export default () => startGame({ condition, getPuzzle });
