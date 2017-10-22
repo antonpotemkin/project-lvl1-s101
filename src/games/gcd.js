@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
@@ -21,7 +20,7 @@ const getPuzzle = () => {
   const secondNumber = getRandomNumber(max, min);
   const question = `${firstNumber} ${secondNumber}`;
   const answer = getGcd(firstNumber, secondNumber);
-  return cons(question, `${answer}`);
+  return { question, correctAnswer: `${answer}` };
 };
 
-export default () => startGame(cons(condition, getPuzzle));
+export default () => startGame({ condition, getPuzzle });
