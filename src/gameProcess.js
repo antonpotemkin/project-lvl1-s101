@@ -19,17 +19,20 @@ const iter = (puzzle, count) => {
 
 export default (game) => {
   console.log('Welcome to the Brain Games!');
-  const condition = game.condition;
-  console.log(condition);
+  if (game.condition) {
+    console.log(game.condition);
+  }
   console.log();
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log();
-  const puzzle = game.getPuzzle;
-  const isWin = iter(puzzle, roundCount);
-  if (!isWin) {
-    console.log(`Let's try again, ${name}!`);
-  } else {
-    console.log(`Congratulations, ${name}!`);
+  if (game.getPuzzle) {
+    console.log();
+    const puzzle = game.getPuzzle;
+    const isWin = iter(puzzle, roundCount);
+    if (!isWin) {
+      console.log(`Let's try again, ${name}!`);
+    } else {
+      console.log(`Congratulations, ${name}!`);
+    }
   }
 };
