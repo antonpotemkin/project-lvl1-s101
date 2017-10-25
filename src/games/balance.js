@@ -14,7 +14,9 @@ const iter = (acc, sum, count) => {
 
 const getBalance = (number) => {
   const array = `${number}`.split('');
-  const length = array.length;
+  // const length = array.length;
+  // error Use object destructuring prefer-destructuring
+  const { length } = array;
   const sum = array.reduce((acc, value) => acc + Number(value), 0);
   return iter('', sum, length);
 };
