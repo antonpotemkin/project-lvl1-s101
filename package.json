@@ -1,8 +1,13 @@
 {
   "name": "project-lvl1-ap",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "Brain Games project by Hexlet",
-  "main": "src/index.js",
+  "engines": {
+    "node": "8"
+  },
+  "files": [
+    "dist"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
@@ -15,7 +20,7 @@
   "scripts": {
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "eslint": "eslint"
   },
   "repository": {
