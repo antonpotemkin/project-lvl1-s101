@@ -4,8 +4,7 @@ import getRandomNumber from '../randomGenerator';
 const condition = 'Balance the given number.';
 const max = 5000;
 
-const iter = (acc, sum, count) =>
-{
+const iter = (acc, sum, count) => {
   if (count === 0) {
     return acc;
   }
