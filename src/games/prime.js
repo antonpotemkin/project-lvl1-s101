@@ -1,10 +1,12 @@
+// @flow
+
 import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
-const condition = 'Answer "yes" if number prime otherwise answer "no".';
-const max = 100;
+const condition: string = 'Answer "yes" if number prime otherwise answer "no".';
+const max: number = 100;
 
-const isPrime = (number) => {
+const isPrime: Function = (number) => {
   if (number <= 1) {
     return false;
   }
@@ -22,10 +24,10 @@ const isPrime = (number) => {
   return iter(div);
 };
 
-const getPuzzle = () => {
-  const number = getRandomNumber(max);
-  const question = number;
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+const getPuzzle: Object = () => {
+  const number: number = getRandomNumber(max);
+  const question: number = number;
+  const correctAnswer: string = isPrime(number) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
 

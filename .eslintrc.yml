@@ -1,5 +1,9 @@
 ---
 
+plugins:
+  - flowtype
+  - babel
+  
 env:
   node: true
 
@@ -7,6 +11,7 @@ parser: babel-eslint
 
 extends:
   - 'airbnb-base'
+  - 'plugin:flowtype/recommended'
 
 rules:
   no-console: 0

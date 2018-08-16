@@ -19,6 +19,8 @@
   },
   "scripts": {
     "babel-node": "babel-node",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
     "eslint": "eslint"
@@ -37,13 +39,19 @@
     "readline-sync": "*"
   },
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-eslint": "*",
-    "babel-preset-env": "*",
-    "babel-preset-stage-0": "*",
-    "eslint": "*",
-    "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-transform-runtime": "*",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "flow-bin": "^0.78.0",
+    "flow-typed": "^2.4.0"
   }
 }

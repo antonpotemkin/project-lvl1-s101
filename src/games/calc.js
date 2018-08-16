@@ -1,27 +1,29 @@
+// @flow
+
 import startGame from '../gameProcess';
 import getRandomNumber from '../randomGenerator';
 
-const condition = 'Find the greatest common divisor of given numbers.';
-const operations = ['+', '-', '*'];
-const maxFirstNumber = 40;
-const maxSecondNumber = 10;
+const condition: string = 'Find the greatest common divisor of given numbers.';
+const operations: Array<string> = ['+', '-', '*'];
+const maxFirstNumber: number = 40;
+const maxSecondNumber: number = 10;
 
-const getPuzzle = () => {
-  const firstNumber = getRandomNumber(maxFirstNumber);
-  const secondNumber = getRandomNumber(maxSecondNumber);
-  const operation = operations[getRandomNumber(operations.length)];
-  const question = `${firstNumber} ${operation} ${secondNumber}`;
+const getPuzzle: Object = () => {
+  const firstNumber: number = getRandomNumber(maxFirstNumber);
+  const secondNumber: number = getRandomNumber(maxSecondNumber);
+  const operation: string = operations[getRandomNumber(operations.length)];
+  const question: string = `${firstNumber} ${operation} ${secondNumber}`;
   switch (operation) {
     case '+': {
-      const answer = firstNumber + secondNumber;
+      const answer: number = firstNumber + secondNumber;
       return { question, correctAnswer: `${answer}` };
     }
     case '-': {
-      const answer = firstNumber - secondNumber;
+      const answer: number = firstNumber - secondNumber;
       return { question, correctAnswer: `${answer}` };
     }
     default: {
-      const answer = firstNumber * secondNumber;
+      const answer: number = firstNumber * secondNumber;
       return { question, correctAnswer: `${answer}` };
     }
   }
