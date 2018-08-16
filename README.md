@@ -1,8 +1,9 @@
 # Brain-games project by Hexlet
 [![Code Climate](https://codeclimate.com/github/antonpotemkin/project-lvl1-s101/badges/gpa.svg)](https://codeclimate.com/github/antonpotemkin/project-lvl1-s101)
 [![Build Status](https://travis-ci.org/antonpotemkin/project-lvl1-s101.svg?branch=master)](https://travis-ci.org/antonpotemkin/project-lvl1-s101)
-[![npm version](https://badge.fury.io/js/project-lvl1-ap.svg)](https://badge.fury.io/js/project-lvl1-ap)  
+[![npm version](https://badge.fury.io/js/project-lvl1-ap.svg)](https://badge.fury.io/js/project-lvl1-ap)
 [ ![Codeship Status for antonpotemkin/project-lvl1-s101](https://app.codeship.com/projects/5faf0af0-f80f-0135-2672-52f56c03f5c1/status?branch=master)](https://app.codeship.com/projects/278092)
+[![https://telegram.me/anton_potemkin](https://img.shields.io/badge/💬%20Telegram-anton_potemkin-blue.svg)](https://telegram.me/anton_potemkin)
 
 В рамках данного проекта реализован набор мини-игр, запускаемых из консоли. Эти игры похожи на то, что обычно называют "Brain Games".
 
