@@ -1,6 +1,6 @@
 {
   "name": "project-lvl1-ap",
-  "version": "1.6.6",
+  "version": "1.6.7",
   "description": "Brain Games project by Hexlet",
   "engines": {
     "node": "8"
@@ -39,19 +39,19 @@
     "readline-sync": "*"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "babel-eslint": "^10.0.1",
     "babel-plugin-transform-runtime": "*",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-babel": "^5.0.0",
-    "eslint-plugin-import": "^2.10.0",
-    "eslint-plugin-flowtype": "^2.46.1",
-    "flow-bin": "^0.78.0",
-    "flow-typed": "^2.4.0"
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.15.0",
+    "flow-bin": "^0.91",
+    "flow-typed": "^2.5.1"
   }
 }
